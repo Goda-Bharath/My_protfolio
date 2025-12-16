@@ -5,7 +5,7 @@ function FeaturedProjects() {
     title: "E-Commerce Platform",
     description:
       "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include real-time inventory, payment processing, and admin dashboard.",
-    image: "/images/ecommerce.png", // replace with your image path
+    image: "/src/assets/cart.png", // replace with your image path
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "#", // replace with actual link
     live: "#",   // replace with actual link
@@ -14,7 +14,7 @@ function FeaturedProjects() {
     title: "AI Chat Application",
     description:
       "Real-time chat application with AI integration using WebSocket and machine learning APIs for intelligent responses.",
-    image: "/images/ai-chat.png", // replace with your image path
+    image: "/src/assets/image.png",
     tech: ["Vue.js", "Python", "WebSocket", "OpenAI"],
     github: "#", // replace with actual link
     live: "#",   // replace with actual link

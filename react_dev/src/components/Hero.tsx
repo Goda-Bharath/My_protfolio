@@ -71,12 +71,20 @@ function Hero() {
       </div>
 
       {/* Hero Image */}
-      <div className="relative z-10 flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
+      <div className="relative z-10 flex-1 flex justify-center  md:justify-end mt-10 md:mt-0">
         <img
           src={heroimage}
           alt="Hero"
-          className="w-3/5 max-w-[400px] md:max-w-[500px] lg:max-w-[600px] rounded-xl border-2 border-pink-500/40 shadow-lg shadow-pink-500/30 animate-fadeIn"
+          className="
+    w-3/5
+    max-w-[400px] md:max-w-[600px] lg:max-w-[600px]
+    rounded-xl
+    border-2 border-pink-500/40
+    shadow-lg shadow-pink-500/30
+    animate__animated animate__fadeInRight
+  "
         />
+
       </div>
     </section>
   );
