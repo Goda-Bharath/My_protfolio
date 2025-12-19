@@ -1,11 +1,14 @@
+import cartImg from "../assets/cart.png";
+import aiImg from "../assets/image.png";
+
 
 function FeaturedProjects() {
-    const projects = [
+    const projects = [ 
   {
     title: "E-Commerce Platform",
     description:
       "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include real-time inventory, payment processing, and admin dashboard.",
-    image: "/src/assets/cart.png", // replace with your image path
+    image: cartImg, // replace with your image path
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
     github: "https://github.com/", // replace with actual link
     live: "#",   // replace with actual link
@@ -14,7 +17,7 @@ function FeaturedProjects() {
     title: "AI Chat Application",
     description:
       "Real-time chat application with AI integration using WebSocket and machine learning APIs for intelligent responses.",
-    image: "/src/assets/image.png",
+    image:aiImg,
     tech: ["Vue.js", "Python", "WebSocket", "OpenAI"],
     github: "#", // replace with actual link
     live: "#",   // replace with actual link
