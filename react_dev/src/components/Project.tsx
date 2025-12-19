@@ -7,7 +7,7 @@ function FeaturedProjects() {
       "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include real-time inventory, payment processing, and admin dashboard.",
     image: "/src/assets/cart.png", // replace with your image path
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "#", // replace with actual link
+    github: "https://github.com/", // replace with actual link
     live: "#",   // replace with actual link
   },
   {
