@@ -21,10 +21,11 @@ function Skills() {
         {/* Section Header */}
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-blue-500 mb-2">What I do</h2>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software Engineering and I will graduate in the year 2021.
-            I am a UI/UX designer and currently working as a freelancer.
+          <p className="hero-description">
+            Creating user-friendly web applications using modern technologies.
+            Focused on writing clean, efficient code and building practical digital solutions.
           </p>
+
         </div>
 
         {/* Skills Grid */}

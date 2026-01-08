@@ -5,7 +5,7 @@ function Header() {
 
   // Futuristic gradients for each nav item
   const navColors = [
-    "from-cyan-400 to-purple-700",   // Home
+    "from-cyan-400 to-purple-700 ",   // Home
     "from-pink-500 to-yellow-400",   // About
     "from-green-400 to-blue-500",    // Skills
     "from-red-500 to-indigo-500",    // Projects
@@ -13,7 +13,7 @@ function Header() {
     "from-purple-400 to-cyan-400",   // Contact
   ];
 
-  const navItems = ["Home", "About Me", "Tech Skills", "Projects", "Resume", "Contact"];
+  const navItems = ["Home", "About Me", "skills", "Projects", "Resume", "Contact"];
   const navLinks = ["#home", "#about", "#skills", "#projects", "#resume", "#contact"];
 
   return (
@@ -37,9 +37,9 @@ function Header() {
         <ul className="hidden md:flex gap-6">
           {navItems.map((item, index) => (
             <li key={index}>
-                 <a
-  href={navLinks[index]}
-  className="
+              <a
+                href={navLinks[index]}
+                className="
     neon-btn
     relative
     inline-block
@@ -54,11 +54,11 @@ function Header() {
     before:opacity-0 hover:before:opacity-100
     hover:before:animate-electricGlow
 
-    before:-z-10    /* 👈 keeps the glow BEHIND the text */
+    before:-z-10   
   "
->
-  {item}
-</a>
+              >
+                {item}
+              </a>
 
             </li>
           ))}

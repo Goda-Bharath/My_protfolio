@@ -78,7 +78,7 @@ function Resume() {
         hover:bg-gradient-to-r from-blue-500 to-indigo-600
       "
           >
-            ⬇ Download PDF
+           <span className="text-black hover:text-white">⬇ Download PDF</span>
           </a>
         </div>
       </div>
