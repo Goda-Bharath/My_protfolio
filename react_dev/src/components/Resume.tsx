@@ -2,7 +2,7 @@ function Resume() {
   return (
     <section id="resume" className="w-full bg-black py-20 px-4 text-white">
       {/* Title */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-16" data-aos="zoom-in">
         <h1 className="text-5xl font-bold text-blue-500 mb-3">Resume</h1>
         <p className="text-gray-400">
           Download my resume or explore my experience
@@ -10,7 +10,7 @@ function Resume() {
       </div>
 
       {/* Main Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10" data-aos="zoom-in">
 
         {/* Left Experience Card */}
         <div className="col-span-2 bg-[#171722]/70 backdrop-blur-md rounded-2xl p-10 border border-white/10 shadow-xl">

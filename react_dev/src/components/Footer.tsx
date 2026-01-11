@@ -30,14 +30,14 @@ function Footer() {
       id="contact"
       className="w-full min-h-screen bg-black flex justify-center items-center px-6 py-20"
     >
-      <div className="w-full max-w-7xl p-[2px] rounded-3xl">
+      <div className="w-full max-w-7xl p-[2px] rounded-3xl" data-aos="zoom-in">
         <div className="rounded-3xl p-10 md:p-16 text-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
             {/* LEFT SIDE */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-5xl font-bold text-blue-500 mb-5">
+                <h2 className="text-5xl font-bold text-blue-500 mb-3">
                   Contact Me
                 </h2>
                 <h1 className="text-6xl md:text-7xl font-black leading-none">
@@ -49,11 +49,17 @@ function Footer() {
               </div>
 
               <div className="space-y-6 text-sm">
-                <div>
-                  <p className="font-semibold opacity-70">Email Support</p>
-                  <p>support@company.com</p>
-                </div>
-
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=godabharath2004@gmail.com&su=Support&body=Hello"
+                  className="block cursor-pointer"
+                >
+                  <div className="space-y-1">
+                    <p className="font-semibold opacity-70">Email Support</p>
+                    <p className="text-blue-500 hover:underline">
+                      godabharath2004@gmail.com
+                    </p>
+                  </div>
+                </a>
                 <div>
                   <p className="font-semibold opacity-70">Live Chat</p>
                   <p>
@@ -64,7 +70,7 @@ function Footer() {
                 <div>
                   <p className="font-semibold opacity-70">Phone Support</p>
                   <p>
-                    +1 800 555 2121 <br />(Mon–Fri 9AM–5PM)
+                    9346352287 <br />(Mon–Fri)
                   </p>
                 </div>
 
@@ -101,7 +107,6 @@ function Footer() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label className="text-sm opacity-80">Email</label>
                   <div className="flex items-center mt-2 border border-white/20 rounded-xl px-4 py-3 bg-white/10 backdrop-blur-sm">
@@ -143,7 +148,6 @@ function Footer() {
                     className="w-full border border-white/20 rounded-2xl p-4 pr-10 bg-white/10 backdrop-blur-sm outline-none placeholder-gray-400"
                     required
                   ></textarea>
-
                   <span className="absolute right-4 bottom-4 text-gray-300">
                     ✎
                   </span>

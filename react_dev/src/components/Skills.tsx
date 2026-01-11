@@ -19,7 +19,7 @@ function Skills() {
     <section id="skills" className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="mb-12 text-center">
+        <div className="mb-12 text-center" data-aos="zoom-in">
           <h2 className="text-4xl font-bold text-blue-500 mb-2">What I do</h2>
           <p className="hero-description">
             Creating user-friendly web applications using modern technologies.
@@ -29,7 +29,7 @@ function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-3 gap-10" data-aos="zoom-in">
           {skills.map((skill) => (
             <div
               key={skill.name}
