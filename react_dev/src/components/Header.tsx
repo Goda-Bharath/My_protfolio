@@ -39,24 +39,23 @@ function Header() {
             <li key={index}>
               <a
                 href={navLinks[index]}
-                className="
+                 className="
     neon-btn
-    relative
-    inline-block
+    relative inline-block
     text-white font-medium px-6 py-2 rounded-full
     transition duration-300 hover:scale-110
     bg-black/60 backdrop-blur-md
-    before:content-[''] before:absolute before:inset-0 before:rounded-full
+    before:content-['']
+    before:absolute before:inset-0 before:rounded-full
     before:p-[3px]
     before:bg-[linear-gradient(90deg,#00c6ff,#6a00ff,#ff004c)]
     before:bg-[length:400%_400%]
     before:blur-[6px]
     before:opacity-0 hover:before:opacity-100
     hover:before:animate-electricGlow
-
-    before:-z-10   
+    before:-z-10
   "
-              >
+>
                 {item}
               </a>
 

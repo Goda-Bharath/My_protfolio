@@ -9,6 +9,8 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Coureser from './Coureser';
 import ZoomIn from './components/zoomin';
+import PortfolioVideo from './components/video';
+import WhatsAppChat from './components/whatappicon';
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
       <Coureser/>
       <Footer/>
       <ZoomIn/>
+      <WhatsAppChat/>
     </BrowserRouter>
   );
 }

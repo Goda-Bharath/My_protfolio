@@ -34,7 +34,7 @@ function FeaturedProjects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-85 drop-shadow-[0_0_8px_#facc15] animate__backInLeft" data-aos="zoom-in "  
+            className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-85 drop-shadow-[0_0_8px_#facc15]" data-aos="zoom-in"  
           >
             {/* Project Image */}
             <img
