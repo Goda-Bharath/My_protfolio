@@ -29,14 +29,14 @@ function Footer() {
     <section
       id="contact"
       className="w-full min-h-screen  flex justify-center items-center px-6 py-20" style={{
-          backgroundImage:
-            "url('https://img.freepik.com/premium-photo/blue-purple-cloth-with-pattern-dots-it_675204-3378.jpg')",    
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }} 
+        backgroundImage:
+          "url('https://img.freepik.com/premium-photo/blue-purple-cloth-with-pattern-dots-it_675204-3378.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="w-full max-w-7xl p-[2px] rounded-3xl" data-aos="zoom-in">
+      <div className="w-full max-w-7xl p-[2px] rounded-3xl">
         <div className="rounded-3xl p-10 md:p-16 text-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
 
@@ -170,6 +170,50 @@ function Footer() {
             </form>
 
           </div>
+        </div>
+        <div className="mt-20  pt-8 text-center text-sm ">
+          <div className="flex flex-wrap justify-center gap-6 mb-4">
+            <a href="#about" className="  relative text-gray-400 hover:text-white transition
+    after:absolute after:left-0 after:bottom-[-4px]
+    after:h-[2px] after:w-0
+    after:bg-white
+    after:transition-all after:duration-300
+    hover:after:w-full
+  ">
+              About
+            </a>
+            <a href="#projects" className="  relative text-gray-400 hover:text-white transition
+    after:absolute after:left-0 after:bottom-[-4px]
+    after:h-[2px] after:w-0
+    after:bg-white
+    after:transition-all after:duration-300
+    hover:after:w-full
+  ">
+              Projects
+            </a>
+            <a href="#contact" className="  relative text-gray-400 hover:text-white transition
+    after:absolute after:left-0 after:bottom-[-4px]
+    after:h-[2px] after:w-0
+    after:bg-white
+    after:transition-all after:duration-300
+    hover:after:w-full
+  ">
+              Contact
+            </a>
+            <a href="#" className="  relative text-gray-400 hover:text-white transition
+    after:absolute after:left-0 after:bottom-[-4px]
+    after:h-[2px] after:w-0
+    after:bg-white
+    after:transition-all after:duration-300
+    hover:after:w-full
+  ">
+              Privacy & Terms
+            </a>
+          </div>
+
+          <p className=" opacity-200 tex">
+            © 2026 Bharath Goda. All rights reserved.
+          </p>
         </div>
       </div>
     </section>

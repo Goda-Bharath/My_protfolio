@@ -14,12 +14,7 @@ const ZoomIn: React.FC = () => {
   },[]);
   return (
     <div>
-      {/* Example usage */}
-      <section className="bg-black"
-      >
-       <h1 className="text-white py-20 px-4"
-        data-aos="zoom-in">Thank You</h1>
-      </section>
+      
     </div>
   );
 };
