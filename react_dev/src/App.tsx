@@ -9,14 +9,16 @@ import Skills from './components/Skills';
 import Resume from './components/Resume';
 import Coureser from './Coureser';
 import ZoomIn from './components/zoomin';
-import PortfolioVideo from './components/video';
+import Carousel from './components/coursel';
 import WhatsAppChat from './components/whatappicon';
+import ScrollProgress from './components/scroll';
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Hero />
+      <Carousel/>
       <About/>
       <Skills/>
       <Projects/>
@@ -25,6 +27,7 @@ function App() {
       <Footer/>
       <ZoomIn/>
       <WhatsAppChat/>
+      <ScrollProgress/>
     </BrowserRouter>
   );
 }

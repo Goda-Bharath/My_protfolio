@@ -28,7 +28,13 @@ function Footer() {
   return (
     <section
       id="contact"
-      className="w-full min-h-screen bg-black flex justify-center items-center px-6 py-20"
+      className="w-full min-h-screen  flex justify-center items-center px-6 py-20" style={{
+          backgroundImage:
+            "url('https://img.freepik.com/premium-photo/blue-purple-cloth-with-pattern-dots-it_675204-3378.jpg')",    
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }} 
     >
       <div className="w-full max-w-7xl p-[2px] rounded-3xl" data-aos="zoom-in">
         <div className="rounded-3xl p-10 md:p-16 text-white">

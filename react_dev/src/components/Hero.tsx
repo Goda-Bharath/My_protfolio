@@ -10,19 +10,25 @@ function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Animated Radial Gradient Overlay */}
         <div className="absolute inset-0 bg-blck animate-pulse"></div>
-        
+
         {/* Neon Grid Pattern */}
         <div className="absolute inset-0 bg-black animate-pulse-slow"></div>
-        
+
         {/* Scanning Lines */}
-        <div className="absolute inset-0 bg-blackanimate-shimmer"></div>
-        
+        <div className="absolute inset-0" style={{
+          backgroundImage:
+            "url('https://img.freepik.com/free-photo/vibrant-liquid-wavy-background-3d-illustration-abstract-iridescent-fluid-render-neon-holographic-smooth-surface-with-colorful-interference-stylish-spectrum-flow-motion_1217-2505.jpg?t=st=1768350731~exp=1768354331~hmac=5623538143e27bdce04074d7e867c07fd265112ce5451dd6013c8a9be39d4e55')",    
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }} ></div>
+
         {/* Enhanced Floating Shapes with Neon Glow */}
         <div className="absolute w-1/4 max-w-[200px] aspect-square top-[10%] left-[5%] rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-500/20 border-2 border-cyan-400/30 shadow-2xl shadow-cyan-500/20 animate-bounce-slow blur-sm"></div>
         <div className="absolute w-1/6 max-w-[150px] aspect-square top-[65%] right-[10%] rounded-full bg-gradient-to-r from-pink-500/20 to-purple-600/20 border-2 border-pink-500/30 shadow-2xl shadow-pink-500/20 animate-bounce-slow delay-200 blur-sm"></div>
         <div className="absolute w-1/8 max-w-[120px] aspect-square top-[25%] right-[8%] rounded-full bg-gradient-to-r from-emerald-400/20 to-blue-500/20 border-2 border-emerald-400/30 shadow-2xl shadow-emerald-500/20 animate-bounce-slow delay-400 blur-sm"></div>
         <div className="absolute w-1/10 max-w-[100px] h-[6rem] bottom-[30%] left-[40%] rounded-full bg-gradient-to-r from-violet-500/20 to-pink-500/20 border-2 border-violet-500/30 shadow-2xl shadow-violet-500/20 animate-bounce-slow delay-600 blur-sm"></div>
-        
+
         {/* Corner Glows */}
         <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-to-b from-cyan-500/10 to-transparent blur-xl"></div>
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-b from-purple-500/10 to-transparent blur-xl"></div>
@@ -42,8 +48,8 @@ function Hero() {
           <span className="text-transparent bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text">Full Stack</span> Developer & Frontend <span className="text-transparent bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text">Developer</span>
         </h1>
 
-        <p className="text-gray-400 max-w-full md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent">
-          Crafting digital experiences with cutting-edge technology and innovative solutions.
+        <p className="text-whte md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text ">
+         <span className=" absolute"> Crafting digital experiences with cutting-edge technology and innovative solutions. </span>
           <br />
           Building the future, one line of code at a time.
         </p>
