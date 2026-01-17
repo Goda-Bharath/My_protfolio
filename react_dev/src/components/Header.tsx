@@ -13,8 +13,8 @@ function Header() {
     "from-purple-400 to-cyan-400",   // Contact
   ];
 
-  const navItems = ["Home", "About Me", "skills", "Projects", "Resume", "Contact"];
-  const navLinks = ["#home", "#about", "#skills", "#projects", "#resume", "#contact"];
+  const navItems = ["Home", "About Me", "Skills", "Projects", "Key Initiatives","Resume", "Contact"];
+  const navLinks = ["#home", "#about", "#skills", "#projects", "#key initistives","#resume", "#contact"];
 
   return (
     <nav className="fixed top-0 w-full backdrop-blur-md border-b border-white/10 z-50">
@@ -22,7 +22,7 @@ function Header() {
 
         {/* Logo */}
         <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent">
-          <a href="#home">Tech</a>
+          <a href="#home">Bharath</a>
         </div>
 
         {/* Hamburger Icon */}

@@ -25,7 +25,7 @@ function FeaturedProjects() {
   ];
   return (
     <section id="projects" className="bg-black text-white py-20 px-4">
-      <div className="max-w-6xl mx-auto text-center mb-12 "data-aos="zoom-in">
+      <div className="max-w-6xl mx-auto text-center mb-12"data-aos="zoom-in">
         <h2 className="text-4xl font-bold text-blue-500 mb-2">Featured Projects</h2>
         <p className="text-gray-400">Showcasing my latest work and innovations</p>
       </div>
@@ -34,7 +34,7 @@ function FeaturedProjects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-85 drop-shadow-[0_0_8px_#facc15]" data-aos="zoom-in"  
+            className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg transform transition duration-300 hover:scale-85 drop-shadow-[0_0_8px_#facc15] " data-aos="zoom-in"  
           >
             {/* Project Image */}
             <img

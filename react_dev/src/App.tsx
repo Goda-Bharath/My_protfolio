@@ -12,6 +12,7 @@ import ZoomIn from './components/zoomin';
 import Carousel from './components/coursel';
 import WhatsAppChat from './components/whatappicon';
 import ScrollProgress from './components/scroll';
+import InitiativesSection from './components/initiatives';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <About/>
       <Skills/>
       <Projects/>
+      <InitiativesSection/>
       <Resume/>
       <Coureser/>
       <Footer/>
