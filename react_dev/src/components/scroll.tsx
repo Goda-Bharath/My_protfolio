@@ -59,7 +59,6 @@ const ScrollProgress = () => {
             2 * Math.PI * 26 * (1 - progress / 100)
           }
           strokeLinecap="round"
-          className="drop-shadow-[0_0_8px_#00ffff]"
         />
       </svg>
     </div>
