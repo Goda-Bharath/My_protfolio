@@ -43,7 +43,7 @@ function Footer() {
             {/* LEFT SIDE */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-5xl font-bold text-blue-500 mb-3">
+                <h2 className="text-5xl font-bold text-blue-500 mb-3 text-center">
                   Contact Me
                 </h2>
                 <h1 className="text-6xl md:text-7xl font-black leading-none">
