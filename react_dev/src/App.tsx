@@ -13,6 +13,8 @@ import Carousel from './components/coursel';
 import WhatsAppChat from './components/whatappicon';
 import ScrollProgress from './components/scroll';
 import InitiativesSection from './components/initiatives';
+import ShareButton from './components/sharebutton';
+import ThemeToggle from './components/darklight';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       <Coureser/>
       <Footer/>
       <ZoomIn/>
+      <ShareButton/>
+      <ThemeToggle/>
       <WhatsAppChat/>
       <ScrollProgress/>
     </BrowserRouter>

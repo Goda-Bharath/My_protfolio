@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-black from-gray-900 via-black to-gray-900 overflow-hidden font-poppins text-white px-4 md:px-8"
+      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-black from-gray-900 via-black to-gray-900 overflow-hidden font-poppins text-white px-4 md:px-1"
     >
       {/* Futuristic Background Grid */}
       <div className="absolute inset-0 z-0">
@@ -49,17 +49,18 @@ function Hero() {
         </h1>
 
         <p className="text-whte md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text ">
-         <span className=" absolute"> Crafting digital experiences with cutting-edge technology and innovative solutions. </span>
+         <span className=" absolute"> Crafting digital experiences with cutting-edge technology and
+         innovative solutions.Building the future, one line of code at a time. </span>
           <br />
-          Building the future, one line of code at a time.
+         
         </p>
 
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+        <div className="flex flex-wrap gap-6 p-5 justify-center md:justify-start">
           {/* Enhanced Futuristic Cyan-Purple Button */}
           <a
             href="#projects"
             className="
-              px-8 py-4 rounded-full relative overflow-hidden
+              px-4 py-4 rounded-full relative overflow-hidden
               bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600
               text-white font-semibold
               shadow-2xl shadow-cyan-500/50

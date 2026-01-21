@@ -13,7 +13,6 @@ const ScrollProgress = () => {
       const scrollPercent = (scrollTop / docHeight) * 100;
       setProgress(scrollPercent);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -22,7 +21,7 @@ const ScrollProgress = () => {
     // Scroll to top / home section
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior:"smooth",
     });
   };
 
@@ -30,7 +29,7 @@ const ScrollProgress = () => {
     <div
       onClick={scrollToHome}
       className="
-        fixed bottom-38 right-6 z-50
+        fixed bottom-41 right-7 z-50
         cursor-pointer
         hover:scale-110 transition
       "

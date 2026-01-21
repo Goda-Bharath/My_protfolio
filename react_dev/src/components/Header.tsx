@@ -13,15 +13,15 @@ function Header() {
     "from-purple-400 to-cyan-400",   // Contact
   ];
 
-  const navItems = ["Home", "About Me", "Skills", "Projects", "Key Initiatives","Resume", "Contact"];
-  const navLinks = ["#home", "#about", "#skills", "#projects", "#key initistives","#resume", "#contact"];
+  const navItems = ["Home", "About Me", "Skills", "Projects", "Key Initiatives", "Resume", "Contact"];
+  const navLinks = ["#home", "#about", "#skills", "#projects", "#keyinitiatives", "#resume", "#contact"];
 
   return (
     <nav className="fixed top-0 w-full backdrop-blur-md border-b border-white/10 z-50">
       <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent">
+        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent ">
           <a href="#home">Bharath</a>
         </div>
 
@@ -39,25 +39,32 @@ function Header() {
             <li key={index}>
               <a
                 href={navLinks[index]}
-                 className="
-    neon-btn
-    relative inline-block
-    text-white font-medium px-6 py-2 rounded-full
-    transition duration-300 hover:scale-110
+                className="
+    relative
+    flex items-center justify-center
+    h-15 min-w-[110px]
+    px-6 
+    text-[14px]  text-white
+    rounded-full
     bg-black/60 backdrop-blur-md
-    before:content-['']
-    before:absolute before:inset-0 before:rounded-full
-    before:p-[3px]
+
+    transition-all duration-300
+    hover:scale-110
+
+    before:absolute before:inset-0
+    before:rounded-full
     before:bg-[linear-gradient(90deg,#00c6ff,#6a00ff,#ff004c)]
     before:bg-[length:400%_400%]
-    before:blur-[6px]
-    before:opacity-0 hover:before:opacity-100
+    before:blur-md
+    before:opacity-0
+    hover:before:opacity-100
     hover:before:animate-electricGlow
     before:-z-10
   "
->
+              >
                 {item}
               </a>
+
 
             </li>
           ))}
@@ -72,7 +79,7 @@ function Header() {
               <a
                 href={navLinks[index]}
                 className={`
-                  block text-white font-medium px-4 py-2 rounded 
+                  block text-white font-medium px-6 py-2 rounded 
                   bg-clip-text text-transparent bg-gradient-to-r ${navColors[index]}
                   transition duration-300 
                   hover:scale-110 

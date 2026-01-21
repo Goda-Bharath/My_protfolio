@@ -34,7 +34,6 @@ const Carousel: React.FC = () => {
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [current]); // depends on current
-
   return (
     <div
       className="relative w-full bg-cover bg-center"

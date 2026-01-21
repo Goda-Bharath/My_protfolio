@@ -1,6 +1,5 @@
 import cartImg from "../assets/cart.png";
-import aiImg from "../assets/image.png";
-
+import Image0 from "../assets/Image0.png";
 
 function FeaturedProjects() {
   const projects = [
@@ -17,7 +16,7 @@ function FeaturedProjects() {
       title: "AI Chat Application",
       description:
         "Real-time chat application with AI integration using WebSocket and machine learning APIs for intelligent responses.",
-      image: aiImg,
+      image: Image0,
       tech: ["Vue.js", "Python", "WebSocket", "OpenAI"],
       github: "#", // replace with actual link
       live: "#",   // replace with actual link
