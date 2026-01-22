@@ -41,11 +41,11 @@ function Hero() {
         <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
           <span>Hello I<span className="text-pink-400">'</span>m</span>
           <br />
-          <span className="text-transparent bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text">Goda Bharath</span>
+          <span className="text-transparent bg-gradient-to-r  from-pink-400 via-purple-400 to-cyan-400 bg-clip-text">Goda Bharath</span>
         </div>
 
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-white via-pink-400 to-purple-400 bg-clip-text text-transparent animate__animated animate__bounceInLeft animate__slow">
-          <span className="text-transparent bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text">Full Stack</span> Developer & Frontend <span className="text-transparent bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text">Developer</span>
+          <span className="text-transparent bg-gradient-to-r text-white bg-clip-text ">Full Stack Developer</span><span className="text-blue-700">  &</span><span className="text-transparent bg-gradient-to-r text-white bg-clip-text"> Frontend Developer</span>
         </h1>
 
         <p className="text-whte md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text ">
@@ -54,6 +54,7 @@ function Hero() {
           <br />
          
         </p>
+         
 
         <div className="flex flex-wrap gap-6 p-5 justify-center md:justify-start">
           {/* Enhanced Futuristic Cyan-Purple Button */}

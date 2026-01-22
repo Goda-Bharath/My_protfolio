@@ -13,8 +13,8 @@ function Header() {
     "from-purple-400 to-cyan-400",   // Contact
   ];
 
-  const navItems = ["Home", "About Me", "Skills", "Projects", "Key Initiatives", "Resume", "Contact"];
-  const navLinks = ["#home", "#about", "#skills", "#projects", "#keyinitiatives", "#resume", "#contact"];
+  const navItems = ["Home", "About Me", "Skills", "Projects", "Key Initiatives", "Resume", "Contact",];
+  const navLinks = ["#home", "#about", "#skills", "#projects", "#keyinitiatives", "#resume", "#contact",];
 
   return (
     <nav className="fixed top-0 w-full backdrop-blur-md border-b border-white/10 z-50">
@@ -22,7 +22,13 @@ function Header() {
 
         {/* Logo */}
         <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent ">
-          <a href="#home">Bharath</a>
+          <span className="text-red-500 drop-shadow-[0_0_8px_#f87171] hover:scale-110 transition-transform duration-300 animate-pulse">B</span>
+          <span className="text-orange-400 drop-shadow-[0_0_8px_#fb923c] hover:scale-110 transition-transform duration-300 animate-pulse">H</span>
+          <span className="text-yellow-400 drop-shadow-[0_0_8px_#facc15] hover:scale-110 transition-transform duration-300 animate-pulse">A</span>
+          <span className="text-green-400 drop-shadow-[0_0_8px_#34d399] hover:scale-110 transition-transform duration-300 animate-pulse">R</span>
+          <span className="text-cyan-400 drop-shadow-[0_0_8px_#22d3ee] hover:scale-110 transition-transform duration-300 animate-pulse">A</span>
+          <span className="text-blue-500 drop-shadow-[0_0_8px_#3b82f6] hover:scale-110 transition-transform duration-300 animate-pulse">T</span>
+          <span className="text-purple-500 drop-shadow-[0_0_8px_#a78bfa] hover:scale-110 transition-transform duration-300 animate-pulse">H</span>
         </div>
 
         {/* Hamburger Icon */}
