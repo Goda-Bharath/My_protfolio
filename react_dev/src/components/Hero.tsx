@@ -4,7 +4,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-black from-gray-900 via-black to-gray-900 overflow-hidden font-poppins text-white px-4 md:px-1"
+      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center bg-black from-gray-900 via-black to-gray-900 overflow-hidden font-poppins text-white px-4 md:px-1 p-10 "
     >
       {/* Futuristic Background Grid */}
       <div className="absolute inset-0 z-0">
@@ -37,8 +37,8 @@ function Hero() {
       </div>
 
       {/* Hero Text */}
-      <div className="relative z-10 flex-1 text-center md:text-left space-y-6">
-        <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+      <div className="relative z-10 flex-1  text-center md:text-left ">
+        <div className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent ">
           <span>Hello I<span className="text-pink-400">'</span>m</span>
           <br />
           <span className="text-transparent bg-gradient-to-r  from-pink-400 via-purple-400 to-cyan-400 bg-clip-text">Goda Bharath</span>
@@ -48,7 +48,9 @@ function Hero() {
           <span className="text-transparent bg-gradient-to-r text-white bg-clip-text ">Full Stack Developer</span><span className="text-blue-700">  &</span><span className="text-transparent bg-gradient-to-r text-white bg-clip-text"> Frontend Developer</span>
         </h1>
 
-        <p className="text-whte md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text ">
+        <p className="text-whte md:max-w-lg lg:max-w-xl bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text  h-16 w-16                            
+    sm:h-16 sm:w-16                        
+    md:h-20 md:w-20  ">
          <span className=" absolute"> Crafting digital experiences with cutting-edge technology and
          innovative solutions.Building the future, one line of code at a time. </span>
           <br />

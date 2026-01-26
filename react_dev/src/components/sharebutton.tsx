@@ -29,11 +29,7 @@ const ShareButton = () => {
     hover:scale-110 transition-all duration-300
     active:scale-95
     text-white
-  "
-
-        
-
-      aria-label="Share Portfolio"
+  " aria-label="Share Portfolio"
     >
       {/* SHARE ICON */}
       <svg
