@@ -1,4 +1,9 @@
 import React from "react";
+import image8 from "../assets/image8.png"
+import image9 from "../assets/image9.png"
+import image10 from "../assets/image10.png"
+import image11 from "../assets/image11.png"
+
 
 interface Initiative {
   image: string;
@@ -10,9 +15,8 @@ interface Initiative {
 const initiatives: Initiative[] = [
   {
     title: "Hackathon Participation",
-    image:
-     "https://media.licdn.com/dms/image/v2/D4E22AQHfaQiHqFktYw/feedshare-shrink_2048_1536/B4EZjnP9PGIMAw-/0/1756226381514?e=1770249600&v=beta&t=fUqdhPzeqiURMhUiGy8Q4ETYao487MoKJyicrigM78A",
-    description:`I participated in the Avalanche Hyderabad 2 day's Hackathon with my team, ComputeShare, and we developed a prototype for a “decentralized infrastructure share with StreamPay” using the Superfluid Protocol. The project focused on creating a seamless and interactive decentralized application.
+    image: image9,
+    description: `I participated in the Avalanche Hyderabad 2 day's Hackathon with my team, ComputeShare, and we developed a prototype for a “decentralized infrastructure share with StreamPay” using the Superfluid Protocol. The project focused on creating a seamless and interactive decentralized application.
 
 My Contributions
 
@@ -27,9 +31,8 @@ Hackathon Schedule`,
   },
   {
     title: "Volunteering & Campus Activities",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQGh-5BPh9jOgg/feedshare-shrink_1280/B4EZrauBE8HMAs-/0/1764606090335?e=1770249600&v=beta&t=EiiKCnGC_c6BY3ho8TgmPx2qePwoFPyuvtupB7vNMCY",
-    description:`Volunteered at events organized by Microsoft Office in collaboration with the Microsoft AI Innovation Hub.
+    image: image8,
+    description: `Volunteered at events organized by Microsoft Office in collaboration with the Microsoft AI Innovation Hub.
 
 Assisted with event coordination and execution during technical and interactive sessions.
 
@@ -40,13 +43,12 @@ Helped clarify general doubts related to event activities and tools used during 
 Assisted in conducting engagement activities, including quizzes and participant interactions.
 
 Worked with the event team, gaining experience in team coordination, communication, and responsibility.`
-           ,
+    ,
     icon: "🤝",
   },
   {
     title: "Mock Interview Experience",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQGLirm9Do0j_g/feedshare-shrink_2048_1536/B4EZhqNxMKGoAo-/0/1754128652071?e=1770249600&v=beta&t=UGKNohm-4-A-6hX0o6o2Crm_w962-N36Kq8gTA45EbA",
+    image: image10,
     description:
       `I had the opportunity to participate in a mock interview organized by Vivekananda Degree College as part of our Campus Recruitment Training (CRT). The session provided practical exposure to real-world interview scenarios and valuable feedback from trainers and panel members.
 
@@ -67,10 +69,9 @@ This experience provided practical insights into the interview process and helpe
   },
   {
     title: "Communication & Peer Guidance",
-    image:
-      "https://media.licdn.com/dms/image/v2/D4E22AQFmh0u6P89Heg/feedshare-shrink_2048_1536/B4EZe2H6xEHIAo-/0/1751107219869?e=1770249600&v=beta&t=_2anjvvkMrIpT9aiCV4a-BUqXJpCgRZ2PXFn43BRZG4",
+    image: image11,
     description:
-    `First Time Speaking on Stage — College Seminar Experience:     
+      `First Time Speaking on Stage — College Seminar Experience:     
 
     I had the opportunity to speak on stage for the first time at a college seminar. This experience was a valuable lesson in stepping out of my comfort zone, managing stage anxiety, and developing confidence.
 
