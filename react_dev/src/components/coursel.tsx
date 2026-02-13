@@ -43,7 +43,7 @@ const Carousel: React.FC = () => {
       }}
     >
       {/* Carousel wrapper */}
-      <div className="relative h-45 overflow-hidden  md:h-82">
+      <div className="relative h-40 overflow-hidden  md:h-82">
         {images.map((img, index) => (
           <div
             key={index}
