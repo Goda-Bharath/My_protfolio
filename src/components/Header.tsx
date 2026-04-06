@@ -1,0 +1,104 @@
+import { useState } from "react";
+
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  
+  const navColors = [
+    "from-cyan-400 to-purple-700 ",   
+    "from-pink-500 to-yellow-400",   
+    "from-green-400 to-blue-500",    
+    "from-red-500 to-indigo-500",    
+    "from-orange-400 to-pink-500",   
+    "from-purple-400 to-cyan-400",   
+  ];
+
+  const navItems = ["Home", "AboutMe", "Skills", "Projects","GitHub Activity", "Key Initiatives", "Resume", "Contact",];
+  const navLinks = ["#home", "#about", "#skills", "#projects", "#githubactivity","#keyinitiatives", "#resume", "#contact",];
+
+  return (
+    <nav className="fixed top-0 w-full backdrop-blur-md border-b border-white/10 z-50">
+      <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
+        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent pr-3 ">
+          <span className="text-red-500 drop-shadow-[0_0_8px_#f87171] hover:scale-110 transition-transform duration-300 animate-pulse">B</span>
+          <span className="text-orange-400 drop-shadow-[0_0_8px_#fb923c] hover:scale-110 transition-transform duration-300 animate-pulse">H</span>
+          <span className="text-yellow-400 drop-shadow-[0_0_8px_#facc15] hover:scale-110 transition-transform duration-300 animate-pulse">A</span>
+          <span className="text-green-400 drop-shadow-[0_0_8px_#34d399] hover:scale-110 transition-transform duration-300 animate-pulse">R</span>
+          <span className="text-cyan-400 drop-shadow-[0_0_8px_#22d3ee] hover:scale-110 transition-transform duration-300 animate-pulse">A</span>
+          <span className="text-blue-500 drop-shadow-[0_0_8px_#3b82f6] hover:scale-110 transition-transform duration-300 animate-pulse">T</span>
+          <span className="text-purple-500 drop-shadow-[0_0_8px_#a78bfa] hover:scale-110 transition-transform duration-300 animate-pulse">H</span>
+        </div>
+
+        {/* Hamburger Icon */}
+        <div
+          className="md:hidden cursor-pointer text-white text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? "✖" : "☰"}
+        </div>
+
+        {/* Desktop Links */}
+        <ul className="hidden md:flex gap-6">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <a
+                href={navLinks[index]}
+                className="
+    relative
+    flex items-center justify-center
+    h-13 min-w-[110px] 
+    text-[14px]  text-white
+    rounded-full
+    bg-black/60 backdrop-blur-md
+    transition-all duration-300
+    hover:scale-110
+    before:absolute before:inset-0
+    before:rounded-full
+    before:bg-[linear-gradient(90deg,#00c6ff,#6a00ff,#ff004c)]
+    before:bg-[length:400%_400%]
+    before:blur-md
+    before:opacity-0
+    hover:before:opacity-100
+    hover:before:animate-electricGlow
+    before:-z-10
+  "
+              >
+                {item}
+              </a>
+
+
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="md:hidden bg-black/90 backdrop-blur-md border-t border-white/10 flex flex-col gap-4 px-8 py-4">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <a
+                href={navLinks[index]}
+                className={`
+                  block text-white font-medium px-6 py-2 rounded 
+                  bg-clip-text text-transparent bg-gradient-to-r ${navColors[index]}
+                  transition duration-300 
+                  hover:scale-110 
+                  hover:text-white 
+                  hover:bg-none
+                  hover:shadow-[0_0_18px_#00ffff]
+                  hover:border hover:border-cyan-400
+                `}
+                onClick={() => setIsOpen(false)}
+              >
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
+  );
+}
+
+export default Header;
