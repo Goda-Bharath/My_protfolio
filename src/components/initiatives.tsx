@@ -1,4 +1,6 @@
 import React from "react";
+import { useState } from "react";
+
 import image8 from "../assets/image8.png"
 import image9 from "../assets/image9.png"
 import image10 from "../assets/image10.png"
@@ -140,21 +142,27 @@ Developed confidence to ask meaningful, career-oriented questions
 Benefited from interactions with mentors and professionals`,
     icon: "💬",
   },
-{
-  title: "SQL (Basic) Certification - HackerRank",
-  image: image15,
-  description: `Successfully earned the SQL (Basic) Certification from HackerRank.
+  {
+    title: "SQL (Basic) Certification - HackerRank",
+    image: image15,
+    description: `Successfully earned the SQL (Basic) Certification from HackerRank.
 
 This certification validates my understanding of fundamental SQL concepts, including writing queries, working with relational databases, and handling data efficiently.
 
 Key skills demonstrated include writing SQL queries for data retrieval and manipulation, understanding database structure and relationships, working with filtering, sorting, and aggregations, and applying logical thinking to solve database-related problems.
 
 This achievement has strengthened my foundation in database concepts, which is essential for full stack development and real-world applications.`,
-  icon: "🗄️",
-}
+    icon: "🗄️",
+  }
 ];
 
 const InitiativesSection: React.FC = () => {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleDescription = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section
       id="keyinitiatives"
@@ -175,29 +183,39 @@ const InitiativesSection: React.FC = () => {
               hover:shadow-[0_0_15px_#00ffff]
             "
           >
-            {/* Image */}
             <img
               src={initiative.image}
               alt={initiative.title}
-              className="h-129 w-198  "
+              className="h-80 w-140  "
             />
 
-            {/* Content */}
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-3 flex items-center gap-2 group-hover:text-white">
+              <h3 className="text-xl font-semibold mb-3  flex items-center gap-2 group-hover:text-white">
                 <span>{initiative.icon}</span>
                 {initiative.title}
               </h3>
 
               <p className="text-gray-400 group-hover:text-white transition-colors duration-300">
-                {initiative.description}
+                {expandedIndex === index
+                  ? initiative.description
+                  : `${initiative.description.slice(0, 240)}...`}
               </p>
             </div>
+            <button
+              onClick={() => toggleDescription(index)}
+              className="
+              mt-5 px-5 py-2 rounded-lg
+              bg-orange-500 text-white font-semibold
+              hover:bg-orange-600 transition
+              block mx-auto text-center"
+            >
+              {expandedIndex === index ? "View Less" : "View More"}
+            </button>
+
           </div>
         ))}
       </div>
     </section>
   );
 };
-
 export default InitiativesSection;

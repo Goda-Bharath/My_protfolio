@@ -1,5 +1,5 @@
 import cartImg from "../assets/cart.png";
-import Image0 from "../assets/Image0.png";
+import intern from "../assets/itern.png";
 
 function FeaturedProjects() {
   const projects = [
@@ -16,7 +16,7 @@ function FeaturedProjects() {
       title: "AI Chat Application",
       description:
         "Real-time chat application with AI integration using WebSocket and machine learning APIs for intelligent responses.",
-      image: Image0,
+      image: intern,
       tech: ["Vue.js", "Python", "WebSocket", "OpenAI"],
       github: "#", // replace with actual link
       live: "#",   // replace with actual link
@@ -39,7 +39,7 @@ function FeaturedProjects() {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-56 object-cover"
+              className="w-full h-56"
             />
 
             {/* Overlay Buttons (GitHub & Live) */}
