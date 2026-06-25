@@ -1,6 +1,5 @@
-import cartImg from "../assets/cart.png";
+﻿import cartImg from "../assets/cart.png";
 import intern from "../assets/itern.png";
-import Image0 from "../assets/Image0.png";
 
 function FeaturedProjects() {
   const projects = [
@@ -45,7 +44,7 @@ function FeaturedProjects() {
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-56 object-cover"
+              className="w-full h-56"
             />
 
             {/* Buttons */}
