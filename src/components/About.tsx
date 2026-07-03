@@ -7,9 +7,14 @@ interface CardData {
   index: string;
 }
 const cards: CardData[] = [
-  {
+{
+    title: "",
+    description: "",
+    index: "0/6",
+  },  
+{
     title: "Full Stack Developer",
-    description: "Hands-on experience with React, Python, Django, and modern web technologies. Building scalable web applications from frontend to backend with real-world internship experience.",
+    description: "Hello! I'm Bharath Goda, an aspiring software developer with a passion for building efficient, scalable, and user-centric web applications. I recently completed my B.Sc. in Life Sciences from Osmania University and transitioned into software development through self-learning and hands-on projects. I have practical experience with Python, Django, React, SQL, JavaScript, and REST APIs. I enjoy solving real-world problems, exploring new technologies, and continuously improving my technical skills. I am currently seeking an entry-level software development role where I can contribute, Eager to learn, and grow into a skilled full-stack engineer.",
     index: "6/6",
   },
   {
@@ -67,9 +72,8 @@ const AboutSection = () => {
     <section
       ref={containerRef} id="about"
       className="relative bg-black text-orange-400"
-      style={{ height: `${cards.length * 100}vh` }}
+      style={{ height: `${cards.length * 42}vh` }}
     >
-      {/* Heading Section */}
       <motion.div
         className="h-screen flex items-center justify-center"
         initial={{ opacity: 0, y: 30 }}
@@ -88,12 +92,12 @@ const AboutSection = () => {
           const isPast = cardProgress > 1;
 
           const translateY = isPast
-            ? -200
-            : index * 20 - progress * cards.length * 1;
+            ? -180
+            : index * 25 - progress * cards.length * 2;
 
           const scale = isPast
             ? 0.9
-            : 1 - Math.max(0, index - progress * cards.length) * 0.05;
+            : 1 - Math.max(0, index - progress * cards.length) * 0.08;
 
           const opacity = isPast ? 0 : 1;
 

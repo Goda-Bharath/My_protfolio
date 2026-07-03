@@ -80,25 +80,68 @@ function Hero() {
           </a>
         </div>
       </div>
-      <div className="relative z-10 flex-1 flex md:justify-end mt-10 md:mt-12 bottom-24 ">
-        <div className="relative">
+      <div className="relative z-10 flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
+        <div className="relative group">
+
+          {/* Glow Behind Image */}
+          <div
+            className="
+        absolute
+        inset-4
+        rounded-3xl
+        bg-gradient-to-r
+        from-orange-500/30
+        via-purple-500/40
+        to-cyan-400/30
+        blur-2xl
+        animate-pulse
+
+        -z-10
+
+        transition-all
+        duration-500
+
+        group-hover:scale-105
+        group-hover:blur-3xl
+      "
+          />
+
           <img
             src={heroimage}
             alt="Goda Bharath - Full Stack Developer"
-            className=" 
-              w-3/5 max-w-[800px] md:max-w-[800px] lg:max-w-[850px]
-              rounded-2xl
-              border-4 border-gradient-to-r border-transparent bg-gradient-to-r from-orange-600/100 via-purple-500/30 to-blue-200/100 p-8 m-37
-              shadow-2xl shadow-purple-700/100
-              animate__animated animate__fadeInRight animate__delay-1s
-              backdrop-blur-sm 
-            "
+            className="
+        relative
+         h-95 right-13
+        w-[65%]
+        sm:w-[75%]
+        md:w-[500px]
+        lg:w-[600px]
+        xl:w-[500px]
+        mx-auto
+        rounded-3xl
+        border
+        border-white/10
+        p-2
+        bg-gradient-to-r
+        from-orange-800/20
+        via-purple-500/20
+        to-cyan-500/20
+
+        shadow-[0_0_40px_rgba(168,85,247,0.45)]
+
+        backdrop-blur-sm
+
+        transition-all
+        duration-500
+
+        group-hover:scale-[1.02]
+        group-hover:shadow-[0_0_60px_rgba(168,85,247,0.8)]
+
+        animate__animated
+        animate__fadeInRight
+        animate__delay-1s
+      "
           />
-          <div className="absolute  top-27 right-15   rounded-2xl bg-gradient-to-r h-116 w-115 animate-pulse  -z-10  border border-white/10
-      shadow-[0_0_40px_rgba(168,85,247,0.6)]
-      transition-all duration-500
-      group-hover:scale-100
-      group-hover:shadow-[0_0_60px_rgba(168,85,247,0.9)]"></div>
         </div>
       </div>
     </section>

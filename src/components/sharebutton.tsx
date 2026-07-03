@@ -20,7 +20,7 @@ const ShareButton = () => {
       onClick={handleShare}
       className="
         fixed bottom-58 right-6 z-[1000]    
-    h-16 w-16                            
+    h-10 w-10                            
     sm:h-16 sm:w-16                        
     md:h-20 md:w-20                         
     flex items-center justify-center
@@ -31,7 +31,6 @@ const ShareButton = () => {
     text-white
   " aria-label="Share Portfolio"
     >
-      {/* SHARE ICON */}
       <svg
         className="w-6 h-6 stroke-white"
         viewBox="0 0 24 24"
