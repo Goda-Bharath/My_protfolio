@@ -57,7 +57,7 @@ function Resume() {
                             </p>
 
                             <a
-                                href="/Bharath_Fullstack_Resume.pdf"
+                                href="/Bharath_goda_fullstack_developer_resume.pdf"
                                 download
                                 className="flex items-center justify-center px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg shadow-lg  duration-300 hover:text-white"
                             >

@@ -1,18 +1,19 @@
-﻿import { useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+﻿import { useMemo, useRef } from "react";
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from "framer-motion";
 
 interface CardData {
   title: string;
   description: string;
   index: string;
 }
+
 const cards: CardData[] = [
-{
+  {
     title: "",
     description: "",
     index: "0/6",
-  },  
-{
+  },
+  {
     title: "Full Stack Developer",
     description: "Hello! I'm Bharath Goda, an aspiring software developer with a passion for building efficient, scalable, and user-centric web applications. I recently completed my B.Sc. in Life Sciences from Osmania University and transitioned into software development through self-learning and hands-on projects. I have practical experience with Python, Django, React, SQL, JavaScript, and REST APIs. I enjoy solving real-world problems, exploring new technologies, and continuously improving my technical skills. I am currently seeking an entry-level software development role where I can contribute, Eager to learn, and grow into a skilled full-stack engineer.",
     index: "6/6",
@@ -23,7 +24,7 @@ const cards: CardData[] = [
     index: "5/6",
   },
   {
-    title: "Internship Experience", 
+    title: "Internship Experience",
     description: "Developed web applications, managed databases, and contributed to team projects at Skill Capital. Gained practical experience in debugging, workflows, and collaborative development.",
     index: "4/6",
   },
@@ -44,39 +45,55 @@ const cards: CardData[] = [
   },
 ];
 
-
 const AboutSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
+  const containerRef = useRef<HTMLElement | null>(null);
+  const shouldReduceMotion = useReducedMotion();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
-      const rect = containerRef.current.getBoundingClientRect();
-      const totalHeight =
-        containerRef.current.offsetHeight - window.innerHeight;
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 20,
+    damping: 2,
+    mass: 0.25,
+    restDelta: 0.0001,
+  });
 
-      if (totalHeight <= 0) return;
+  const progress = shouldReduceMotion ? scrollYProgress : smoothProgress;
 
-      const scrolled = -rect.top;
-      const value = Math.min(Math.max(scrolled / totalHeight, 0), 1);
-      setProgress(value);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const progressValues = useMemo(
+    () =>
+      cards.map((_, index) => ({
+        translateY: useTransform(progress, (value) => {
+          const cardProgress = value * cards.length - index;
+          const isPast = cardProgress > 1;
+          return isPast ? -150 : index * 15 - value * cards.length * 1;
+        }),
+        scale: useTransform(progress, (value) => {
+          const cardProgress = value * cards.length - index;
+          const isPast = cardProgress > 1;
+          return isPast ? 0.9 : 1 - Math.max(0, index - value * cards.length) * 0.02;
+        }),
+        opacity: useTransform(progress, (value) => {
+          const cardProgress = value * cards.length - index;
+          return cardProgress > 1 ? 0 : 1;
+        }),
+      })),
+    [progress]
+  );
 
   return (
     <section
-      ref={containerRef} id="about"
+      ref={containerRef}
+      id="about"
       className="relative bg-black text-orange-400"
       style={{ height: `${cards.length * 42}vh` }}
     >
       <motion.div
         className="h-screen flex items-center justify-center"
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
@@ -85,44 +102,26 @@ const AboutSection = () => {
           What I <span className="text-cyan-400  ">Bring</span>
         </h2>
       </motion.div>
+
       <div className="sticky top-0 h-screen flex items-center justify-center">
-        {cards.map((card, index) => {
-          const cardProgress = progress * cards.length - index;
-
-          const isPast = cardProgress > 1;
-
-          const translateY = isPast
-            ? -180
-            : index * 25 - progress * cards.length * 2;
-
-          const scale = isPast
-            ? 0.9
-            : 1 - Math.max(0, index - progress * cards.length) * 0.08;
-
-          const opacity = isPast ? 0 : 1;
-
-          return (
-            <div
-              key={card.title}
-              className="absolute w-[850px] h-[380px] gap-12 rounded-3xl  bg-white p-10  shadow-2xl transition-all duration-700"
-              style={{
-                transform: `translateY(${translateY}px) scale(${scale})`,
-                opacity,
-                zIndex: cards.length - index,
-              }}
-            >
-              <h3 className="text-xl font-semibold mb-3">
-                {card.title}
-              </h3>
-              <p className="text-sm text-black leading-relaxed">
-                {card.description}
-              </p>
-              <p className="absolute bottom-6 right-8 text-xs text-gray-400 font-mono">
-                {card.index}
-              </p>
-            </div>
-          );
-        })}
+        {cards.map((card, index) => (
+          <motion.div
+            key={card.title || index}
+            className="absolute w-[850px] h-[380px] gap-12 rounded-3xl  bg-white p-10  shadow-2xl transition-all duration-700"
+            style={{
+              translateY: progressValues[index].translateY,
+              scale: progressValues[index].scale,
+              opacity: progressValues[index].opacity,
+              zIndex: cards.length - index,
+            }}
+          >
+            <h3 className="text-xl font-semibold mb-3">{card.title}</h3>
+            <p className="text-sm text-black leading-relaxed">{card.description}</p>
+            <p className="absolute bottom-6 right-8 text-xs text-gray-400 font-mono">
+              {card.index}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
